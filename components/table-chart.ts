@@ -18,11 +18,15 @@ export class TableChart extends LitElement {
 
   static get styles() {
     return css`
-      table, td {
+      table.table {
         border: 1px solid #333;
       }
 
-      thead, tfoot {
+      table.table td {
+        padding: 1rem;
+      }
+
+      table.table thead {
         background-color: #333;
         color: #fff;
       }
@@ -59,7 +63,7 @@ export class TableChart extends LitElement {
 
   render() {
     return html`
-      <table>
+      <table class="table">
         ${this.renderChartHeader()}
         <tbody>
           ${this.data.map((d: ChartDataElement, index: number) => this.renderChartElement(d, calculateRandomColor(index)))}
