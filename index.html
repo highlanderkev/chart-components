@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="/node_modules/@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js"></script>
+    <script src="/node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+    <title>LitElement Example</title>
+    <style>
+      html {
+        font-family: Roboto;
+      }
+
+      .chart {
+        --element-1-color: green;
+      }
+
+      .pie-chart {
+        --element-1-color: black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <simple-greeting></simple-greeting>
+    <table-chart></table-chart>
+    <bar-chart class="chart" data='[{"id": 1, "text": "One", "value": 40}, {"id": 2, "text": "Two", "value": 70}, {"id": 3, "text":"Three", "value": 30}]'></bar-chart>
+    <pie-chart class="pie-chart" isDonut="true" data='[{"id": 1, "text": "One", "value": 40}, {"id": 2, "text": "Two", "value": 70}, {"id": 3, "text":"Three", "value": 30}]'></pie-chart>
+    <pie-chart class="pie-chart" data='[{"id": 1, "text": "One", "value": 40}, {"id": 2, "text": "Two", "value": 70}, {"id": 3, "text":"Three", "value": 30}]'></pie-chart>
+  </body>
+
+</html>
